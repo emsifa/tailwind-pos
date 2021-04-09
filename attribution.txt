@@ -1,0 +1,10 @@
+croissant: <a href="https://www.freepik.com/photos/food">Food photo created by jcomp - www.freepik.com</a>
+burger: <a href="https://www.freepik.com/photos/food">Food photo created by timolina - www.freepik.com</a>
+sandwich: <a href="https://www.freepik.com/photos/background">Background photo created by topntp26 - www.freepik.com</a>
+cinnamon roll: <a href="https://www.freepik.com/photos/background">Background photo created by mrsiraphol - www.freepik.com</a>
+iced coffee latte: <a href="https://www.freepik.com/photos/coffee">Coffee photo created by mrsiraphol - www.freepik.com</a>
+ice chocolate: <a href="https://www.freepik.com/photos/food">Food photo created by topntp26 - www.freepik.com</a>
+donut cokelat kacang: <a href="https://www.freepik.com/photos/food">Food photo created by Racool_studio - www.freepik.com</a>
+ice tea: <a href="https://www.freepik.com/photos/background">Background photo created by topntp26 - www.freepik.com</a>
+green tea: <a href="https://www.freepik.com/photos/food">Food photo created by jcomp - www.freepik.com</a>
+sawarma: <a href="https://www.freepik.com/photos/food">Food photo created by 8photo - www.freepik.com</a>
