@@ -34,6 +34,9 @@ function initApp() {
     cart: [],
     cash: 0,
     change: 0,
+    isShowModalReceipt: false,
+    receiptNo: null,
+    receiptDate: null,
     async initDatabase() {
       this.db = await loadDatabase();
       this.loadProducts();
@@ -123,10 +126,19 @@ function initApp() {
         0
       );
     },
-    proceedable() {
+    submitable() {
       return this.change >= 0 && this.cart.length > 0;
     },
-    proceed() {},
+    submit() {
+      const time = new Date();
+      this.isShowModalReceipt = true;
+      this.receiptNo = `TWPOS-KS-${Math.round(time.getTime() / 1000)}`;
+      this.receiptDate = this.dateFormat(time);
+    },
+    dateFormat(date) {
+      const formatter = new Intl.DateTimeFormat('id', { dateStyle: 'short', timeStyle: 'short'});
+      return formatter.format(date);
+    },
     numberFormat(number) {
       return (number || "")
         .toString()
@@ -139,6 +151,8 @@ function initApp() {
     clear() {
       this.cash = 0;
       this.cart = [];
+      this.receiptNo = null;
+      this.receiptDate = null;
       this.updateChange();
       this.clearSound();
     },
@@ -154,6 +168,24 @@ function initApp() {
       sound.play();
       sound.onended = () => delete(sound);
     },
+    printAndProceed() {
+      const receiptContent = document.getElementById('receipt-content');
+      const titleBefore = document.title;
+      const printArea = document.getElementById('print-area');
+
+      printArea.innerHTML = receiptContent.innerHTML;
+      document.title = this.receiptNo;
+
+      window.print();
+      this.isShowModalReceipt = false;
+
+      printArea.innerHTML = '';
+      document.title = titleBefore;
+
+      // TODO save sale data to database
+
+      this.clear();
+    }
   };
 
   return app;

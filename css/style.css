@@ -214,3 +214,16 @@
   background-color: rgba(100, 120, 130, .6);
   backdrop-filter: blur(10px);
 }
+
+table td {
+  vertical-align: top;
+}
+
+@media print {
+  .hide-print {
+    display: none !important;
+  }
+  .print-area {
+    display: block;
+  }
+}
