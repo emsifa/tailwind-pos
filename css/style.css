@@ -219,6 +219,10 @@ table td {
   vertical-align: top;
 }
 
+#receipt-content {
+  max-height: 70vh;
+}
+
 @media print {
   .hide-print {
     display: none !important;
