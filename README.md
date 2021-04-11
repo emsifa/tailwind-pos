@@ -1,8 +1,7 @@
 TAILWIND POS
 ============
 
-![image](https://user-images.githubusercontent.com/6297931/114196042-31c5b600-997b-11eb-9ab9-32e9766c1b3d.png)
-
+![tailwind-pos-cover](https://user-images.githubusercontent.com/6297931/114289085-6599fc00-9a9f-11eb-810e-b32f1096ecdc.png)
 
 Tailwind POS is a POS (Point of Sales) application built with [Tailwind.css](https://tailwindcss.com) and [Alpine.js](https://github.com/alpinejs/alpine/). I create this application in order to exercise myself to build web application in "traditional" way, without any module bundler/build tools such as webpack, rollup, postcss, etc. So yes, it load tailwind.css and alpine.js via CDN.
 
