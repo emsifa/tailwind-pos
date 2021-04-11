@@ -320,9 +320,30 @@
     </div>
 
     <!-- modal receipt -->
-    <div x-show="isShowModalReceipt" class="fixed w-full h-screen left-0 top-0 z-10 flex flex-wrap justify-center content-center p-24">
-      <div class="fixed glass w-full h-screen left-0 top-0 z-0" x-on:click="closeModalReceipt()"></div>
-      <div class="w-96 rounded-3xl bg-white shadow-xl overflow-hidden z-10">
+    <div
+      x-show="isShowModalReceipt"
+      class="fixed w-full h-screen left-0 top-0 z-10 flex flex-wrap justify-center content-center p-24"
+    >
+      <div
+        x-show="isShowModalReceipt"
+        class="fixed glass w-full h-screen left-0 top-0 z-0" x-on:click="closeModalReceipt()"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-100"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+      ></div>
+      <div
+        x-show="isShowModalReceipt"
+        class="w-96 rounded-3xl bg-white shadow-xl overflow-hidden z-10"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="opacity-0 transform scale-90"
+        x-transition:enter-end="opacity-100 transform scale-100"
+        x-transition:leave="transition ease-in duration-100"
+        x-transition:leave-start="opacity-100 transform scale-100"
+        x-transition:leave-end="opacity-0 transform scale-90"
+      >
         <div id="receipt-content" class="text-left w-full text-sm p-6 overflow-auto">
           <div class="text-center">
             <img src="img/receipt-logo.png" alt="Tailwind POS" class="mb-3 w-8 h-8 inline-block">
