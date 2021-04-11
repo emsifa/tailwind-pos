@@ -29,10 +29,10 @@
             <a href="#"
                class="flex items-center">
               <span
-                class="flex items-center justify-center text-cyan-100 h-12 w-12 rounded-2xl"
+                class="flex items-center justify-center h-12 w-12 rounded-2xl"
                 x-bind:class="{
-                  'hover:bg-cyan-400': activeMenu !== 'pos',
-                  'bg-cyan-300 shadow-lg': activeMenu === 'pos',
+                  'hover:bg-cyan-400 text-cyan-100': activeMenu !== 'pos',
+                  'bg-cyan-300 shadow-lg text-white': activeMenu === 'pos',
                 }"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
