@@ -106,8 +106,8 @@ function initApp() {
       }
       this.updateChange();
     },
-    addCash(amount) {
-      this.cash += amount;
+    addCash(amount) {      
+      this.cash = (this.cash || 0) + amount;
       this.updateChange();
       this.beep();
     },
